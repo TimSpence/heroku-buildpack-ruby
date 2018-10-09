@@ -2,6 +2,13 @@
 # The actual `bin/compile` code lives in `bin/support/ruby_compile`. This file
 # instead bootstraps the ruby needed and then executes `bin/support/ruby_compile`
 
+echo "env is:\n$(env)\n\n"
+
+echo "command was $0"
+
+args=$@
+echo "args were $args"
+
 BIN_DIR=$(cd $(dirname $0); pwd)
 BUILDPACK_DIR=$(dirname $BIN_DIR)
 
